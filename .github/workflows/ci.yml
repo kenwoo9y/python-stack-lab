@@ -1,0 +1,47 @@
+name: Python CI Workflow
+
+on:
+  pull_request:
+    branches: main
+
+defaults:
+  run:
+    working-directory: ./  # 作業ディレクトリを指定
+
+jobs:
+  python-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # コードのチェックアウト
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # uvのセットアップ (Pythonのインストール・依存関係のキャッシュも含む)
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: '3.11' # Pythonのバージョンを指定
+          enable-cache: true
+
+      # 依存関係のインストール
+      - name: Install dependencies
+        run: uv sync
+
+      # RuffによるFormatチェック
+      - name: Run Ruff (format)
+        run: uv run ruff format . --check --diff
+
+      # RuffによるLintチェック
+      - name: Run Ruff (lint)
+        run: uv run ruff check --output-format=github .
+
+      # Pytestの実行とカバレッジチェック
+      - name: Run Pytest with coverage
+        env:
+          DB_HOST: postgresql-db
+          DB_PORT: 5432
+          DB_NAME: todo
+          DB_USER: todo
+          DB_PASSWORD: todo
+        run: uv run pytest --cov --cov-fail-under=80
