@@ -1,0 +1,17 @@
+[report]
+include_namespace_packages = true
+show_missing=true
+
+omit = 
+    *__init__.py
+    tests/*
+    api/main.py 
+    api/cors.py
+    api/db.py
+    api/migrate_db.py
+    api/db_config.py
+
+[coverage:run]
+concurrency =
+  greenlet
+  thread
