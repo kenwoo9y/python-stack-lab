@@ -19,7 +19,7 @@ A lab for exploring and experimenting with a Python backend development stack, i
 
 ### Backend
 - [FastAPI](https://fastapi.tiangolo.com/) v0.110 - High-performance Python web framework
-- [Uvicorn](https://www.uvicorn.org/) v0.29 - ASGI server for running the FastAPI app
+- [Uvicorn](https://uvicorn.dev/) v0.29 - ASGI server for running the FastAPI app
 - [SQLAlchemy](https://www.sqlalchemy.org/) v2.0 - SQL toolkit and ORM, used in async mode
 - [asyncpg](https://magicstack.github.io/asyncpg/) v0.29 - Async PostgreSQL driver for the application
 - [psycopg2](https://www.psycopg.org/) v2.9 - Sync PostgreSQL driver used for database setup/migration scripts
