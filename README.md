@@ -1,25 +1,28 @@
 # python-stack-lab
 
-This is a ToDo Web API implemented with FastAPI, designed for simplicity and extensibility.
+A lab for exploring and experimenting with a Python backend development stack, including FastAPI, SQLAlchemy, uv, Ruff, Pytest, PostgreSQL, Docker, and GitHub Actions.
 
 ## Tech Stack
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00.svg?style=for-the-badge&logo=SQLAlchemy&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-DE5FE9.svg?style=for-the-badge&logo=uv&logoColor=white)
 ![Ruff](https://img.shields.io/badge/Ruff-D7FF64.svg?style=for-the-badge&logo=Ruff&logoColor=black)
 ![Pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ### Programming Languages
-- [Python](https://www.python.org/) v3.11 - Primary development language
+- [Python](https://www.python.org/) v3.11 - Development language
 
 ### Backend
-- [FastAPI](https://fastapi.tiangolo.com/) v0.110.1 - High-performance Python web framework
-- [SQLAlchemy](https://www.sqlalchemy.org/) v2.0.29 - SQL toolkit and ORM
+- [FastAPI](https://fastapi.tiangolo.com/) v0.110 - High-performance Python web framework
+- [Uvicorn](https://www.uvicorn.org/) v0.29 - ASGI server for running the FastAPI app
+- [SQLAlchemy](https://www.sqlalchemy.org/) v2.0 - SQL toolkit and ORM, used in async mode
+- [asyncpg](https://magicstack.github.io/asyncpg/) v0.29 - Async PostgreSQL driver for the application
+- [psycopg2](https://www.psycopg.org/) v2.9 - Sync PostgreSQL driver used for database setup/migration scripts
 
 ### Database
 - [PostgreSQL](https://www.postgresql.org/) v16 - Primary relational database
@@ -29,9 +32,12 @@ This is a ToDo Web API implemented with FastAPI, designed for simplicity and ext
 - [Docker](https://www.docker.com/) with Compose v3.9 - Containerization platform for building and managing applications
 
 ### Testing & Quality Assurance
-- [pytest](https://docs.pytest.org/) v0.23.6 - Python testing framework
-- [pytest-cov](https://pytest-cov.readthedocs.io/) v6.0.0 - Code coverage plugin
-- [Ruff](https://docs.astral.sh/ruff/) v0.7.4 - Fast Python linter and formatter
+- [pytest](https://docs.pytest.org/) v8.4 - Python testing framework
+- [pytest-asyncio](https://pytest-asyncio.readthedocs.io/) v0.23 - Support for testing async FastAPI/SQLAlchemy code
+- [pytest-cov](https://pytest-cov.readthedocs.io/) v6.0 - Code coverage plugin
+- [httpx](https://www.python-httpx.org/) v0.27 - HTTP client used for testing FastAPI endpoints
+- [aiosqlite](https://github.com/omnilib/aiosqlite) v0.20 - Async SQLite driver used for isolated test databases
+- [Ruff](https://docs.astral.sh/ruff/) v0.7 - Fast Python linter and formatter
 
 ### CI/CD
 - GitHub Actions - Continuous Integration and Deployment
