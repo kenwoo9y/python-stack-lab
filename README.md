@@ -1,6 +1,6 @@
 # Python-stack-lab
 
-A lab for exploring and experimenting with a Python backend development stack, including FastAPI, SQLAlchemy, uv, Ruff, ty, Pytest, PostgreSQL, Docker, and GitHub Actions.
+A lab for exploring and experimenting with a Python backend development stack, including FastAPI, SQLAlchemy, uv, Ruff, ty, pytest, PostgreSQL, Docker, and GitHub Actions.
 
 ## Tech Stack
 

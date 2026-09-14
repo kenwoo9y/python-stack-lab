@@ -40,7 +40,7 @@ jobs:
       - name: Run ty (type check)
         run: uv run ty check .
 
-      # Pytestの実行とカバレッジチェック
+      # pytestの実行とカバレッジチェック
       - name: Run Pytest with coverage
         env:
           DB_HOST: postgresql-db
