@@ -1,7 +1,7 @@
 include .env
 export
 
-.PHONY: help build-local up down logs ps migrate psql test test-coverage lint-check lint-fix format-check format-fix
+.PHONY: help build-local up down logs ps migrate psql test test-coverage lint-check lint-fix format-check format-fix type-check
 .DEFAULT_GOAL := help
 
 build-local: ## Build docker image to local development
@@ -42,6 +42,9 @@ format-check: ## Check code formatting with Ruff
 
 format-fix: ## Format code with Ruff
 	uv run ruff format .
+
+type-check: ## Run ty type checker
+	uv run ty check .
 
 help: ## Show options
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | \
