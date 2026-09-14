@@ -36,6 +36,10 @@ jobs:
       - name: Run Ruff (lint)
         run: uv run ruff check --output-format=github .
 
+      # tyによる型チェック
+      - name: Run ty (type check)
+        run: uv run ty check .
+
       # Pytestの実行とカバレッジチェック
       - name: Run Pytest with coverage
         env:

@@ -1,8 +1,7 @@
 from dotenv import load_dotenv
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import async_sessionmaker
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.orm import declarative_base
-from sqlalchemy.orm import sessionmaker
 
 from api.db_config import get_database_url
 
@@ -13,7 +12,7 @@ load_dotenv()
 ASYNC_DB_URL = get_database_url()
 
 async_engine = create_async_engine(ASYNC_DB_URL, echo=True)
-async_session = sessionmaker(autocommit=False, autoflush=False, bind=async_engine, class_=AsyncSession)
+async_session = async_sessionmaker(autocommit=False, autoflush=False, bind=async_engine)
 
 Base = declarative_base()
 

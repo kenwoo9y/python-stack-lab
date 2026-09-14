@@ -1,6 +1,6 @@
 # python-stack-lab
 
-A lab for exploring and experimenting with a Python backend development stack, including FastAPI, SQLAlchemy, uv, Ruff, Pytest, PostgreSQL, Docker, and GitHub Actions.
+A lab for exploring and experimenting with a Python backend development stack, including FastAPI, SQLAlchemy, uv, Ruff, ty, Pytest, PostgreSQL, Docker, and GitHub Actions.
 
 ## Tech Stack
 
@@ -9,6 +9,7 @@ A lab for exploring and experimenting with a Python backend development stack, i
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00.svg?style=for-the-badge&logo=SQLAlchemy&logoColor=white)
 ![uv](https://img.shields.io/badge/uv-DE5FE9.svg?style=for-the-badge&logo=uv&logoColor=white)
 ![Ruff](https://img.shields.io/badge/Ruff-D7FF64.svg?style=for-the-badge&logo=Ruff&logoColor=black)
+![ty](https://img.shields.io/badge/ty-46EBE1.svg?style=for-the-badge&logo=ty&logoColor=black)
 ![Pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
@@ -38,6 +39,7 @@ A lab for exploring and experimenting with a Python backend development stack, i
 - [httpx](https://www.python-httpx.org/) v0.27 - HTTP client used for testing FastAPI endpoints
 - [aiosqlite](https://github.com/omnilib/aiosqlite) v0.20 - Async SQLite driver used for isolated test databases
 - [Ruff](https://docs.astral.sh/ruff/) v0.7 - Fast Python linter and formatter
+- [ty](https://docs.astral.sh/ty/) v0.0.80 - Fast Python type checker
 
 ### CI/CD
 - GitHub Actions - Continuous Integration and Deployment
@@ -117,6 +119,10 @@ A lab for exploring and experimenting with a Python backend development stack, i
 - Apply code formatting:
     ```
     $ make format-fix
+    ```
+- Run type check:
+    ```
+    $ make type-check
     ```
 
 ## Database
